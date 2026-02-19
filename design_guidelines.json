@@ -1,0 +1,183 @@
+{
+  "identity": {
+    "persona": "E1",
+    "role": "Creative Designer",
+    "principles": [
+      "Fusion over Imitation",
+      "Emotion First",
+      "Content is king",
+      "Zoom in",
+      "Negative Space",
+      "Contrast"
+    ]
+  },
+  "context": {
+    "project_type": "Landing Page / Professional Portfolio",
+    "industry": "Psychology / Mental Health",
+    "target_audience": "Individuals, couples, families in French-speaking Switzerland",
+    "emotional_tone": "Soothing, professional, confidential, respectful, grounded, safe",
+    "language": "French (fr-CH)",
+    "key_requirements": [
+      "One-page layout",
+      "Neutral and sober tones (Beige, Grey, White)",
+      "Terracotta/Coral accent from logo",
+      "Contact form with specific fields",
+      "No direct booking system",
+      "Mobile-responsive"
+    ]
+  },
+  "design_system": {
+    "theme": "light",
+    "archetype": "Organic & Earthy",
+    "colors": {
+      "palette": {
+        "background": "#FDFBF7",
+        "surface": "#FFFFFF",
+        "surface_secondary": "#F5F5F0",
+        "text_primary": "#2D3339",
+        "text_secondary": "#5C6269",
+        "accent": "#CD5D45",
+        "accent_light": "#E8B4A6",
+        "border": "#E5E5E0"
+      },
+      "usage": {
+        "primary_action": "#CD5D45",
+        "secondary_action": "#F5F5F0",
+        "hero_bg": "#FDFBF7",
+        "footer_bg": "#2D3339",
+        "footer_text": "#FDFBF7"
+      }
+    },
+    "typography": {
+      "font_family_heading": "Playfair Display, serif",
+      "font_family_body": "Mulish, sans-serif",
+      "scale": {
+        "h1": "text-4xl md:text-6xl font-medium tracking-tight",
+        "h2": "text-3xl md:text-5xl font-medium tracking-tight",
+        "h3": "text-2xl md:text-3xl font-medium",
+        "body_large": "text-lg md:text-xl leading-relaxed",
+        "body_base": "text-base md:text-lg leading-relaxed",
+        "caption": "text-sm text-muted-foreground tracking-wide uppercase"
+      }
+    },
+    "spacing": {
+      "container_padding": "p-6 md:p-12 lg:p-24",
+      "section_gap": "gap-12 md:gap-24",
+      "element_gap": "gap-6 md:gap-8"
+    },
+    "border_radius": {
+      "card": "rounded-none md:rounded-lg",
+      "button": "rounded-full",
+      "input": "rounded-md"
+    },
+    "effects": {
+      "shadow": "shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)]",
+      "glass": "backdrop-blur-md bg-white/80 border border-white/20",
+      "transition": "transition-all duration-500 ease-out"
+    }
+  },
+  "layout_strategy": {
+    "hero": {
+      "type": "Split or Centered",
+      "description": "Peaceful, breathable hero section. Either a split layout with text on left and soothing image on right, or centered text with a subtle textured background.",
+      "elements": ["Logo (Top Left)", "Navigation (Top Right)", "Headline", "Subheadline", "CTA Button"]
+    },
+    "services": {
+      "type": "Grid (3 Columns)",
+      "description": "Clean cards describing the 3 main service areas. Use generous padding and subtle hover lift.",
+      "cards": [
+        "Thérapies relationnelles",
+        "Soutien à la parentalité",
+        "Suivis individuels"
+      ]
+    },
+    "approach": {
+      "type": "Asymmetric Split",
+      "description": "Text describing the systemic approach on one side, calming abstract or nature image on the other.",
+      "elements": ["Heading", "Paragraphs", "Image"]
+    },
+    "contact": {
+      "type": "Centered Form",
+      "description": "Clean, easy-to-read form. No distractions. Clear validation messages.",
+      "fields": ["Nom", "Email", "Téléphone", "Pour qui (Dropdown)", "Situation", "Motif"]
+    }
+  },
+  "assets": {
+    "images": {
+      "hero_background": {
+        "url": "https://images.unsplash.com/photo-1667964394228-7b0a05156df7?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1OTN8MHwxfHNlYXJjaHwzfHx3YXJtJTIwYmVpZ2UlMjBwYXBlciUyMHRleHR1cmUlMjBhYnN0cmFjdCUyMG1pbmltYWxpc3QlMjBiYWNrZ3JvdW5kfGVufDB8fHx8MTc3MTUxMDg3NHww&ixlib=rb-4.1.0&q=85",
+        "alt": "Subtle beige wall texture"
+      },
+      "portrait_placeholder": {
+        "url": "https://images.unsplash.com/photo-1635366898830-b5d48950e4f6?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODd8MHwxfHNlYXJjaHwxfHxmcmllbmRseSUyMHByb2Zlc3Npb25hbCUyMHdvbWFuJTIwcHN5Y2hvbG9naXN0JTIwcG9ydHJhaXQlMjBuYXR1cmFsJTIwbGlnaHR8ZW58MHx8fHwxNzcxNTEwODY3fDA&ixlib=rb-4.1.0&q=85",
+        "alt": "Professional portrait of a psychologist"
+      },
+      "services_atmosphere": {
+        "url": "https://images.pexels.com/photos/32922278/pexels-photo-32922278.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "alt": "Serene minimalist interior"
+      },
+      "approach_abstract": {
+        "url": "https://images.pexels.com/photos/5993561/pexels-photo-5993561.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "alt": "Textured paper abstract"
+      }
+    },
+    "icons": {
+      "library": "lucide-react",
+      "style": "Stroke width 1.5px, color text-secondary"
+    },
+    "logo_placeholder": {
+      "instruction": "Create a custom SVG component 'LogoPlaceholder'. Use the accent color (#CD5D45). Draw a simple circle with abstract lines inside representing a stylized family and hands. Do NOT use an external image for the logo."
+    }
+  },
+  "content_strategy": {
+    "hero": {
+      "title": "Sophie Aigroz, Psychologue FSP",
+      "subtitle": "Un espace d'écoute confidentiel et respectueux au cœur du Valais.",
+      "cta": "Prendre contact"
+    },
+    "services": {
+      "title": "Mes Services",
+      "items": [
+        {
+          "title": "Thérapies Relationnelles",
+          "desc": "Accompagnement pour les familles, les couples et la coparentalité. Retrouver l'équilibre et la communication."
+        },
+        {
+          "title": "Soutien à la Parentalité",
+          "desc": "Guidance parentale, prévention du burn-out et renforcement du lien parent-enfant."
+        },
+        {
+          "title": "Suivis Individuels",
+          "desc": "Pour adultes et adolescents. Gestion des difficultés émotionnelles et régulation."
+        }
+      ]
+    },
+    "approach": {
+      "title": "Une Approche Systémique",
+      "text": "Je propose un accompagnement basé sur l'approche systémique, considérant l'individu dans son environnement relationnel. Mon cabinet à Saxon offre un cadre sécurisant pour explorer vos difficultés et mobiliser vos ressources."
+    },
+    "info": {
+      "address": "1907 Saxon, Valais",
+      "phone": "079 285 62 09",
+      "email": "sophie.aigroz@gmail.com",
+      "hours": "Lundi et Mercredi: 08h00 - 18h00"
+    }
+  },
+  "instructions_to_main_agent": [
+    "Use 'Playfair Display' for all Headings (H1-H3). Import it from Google Fonts.",
+    "Use 'Mulish' for all Body text. Import it from Google Fonts.",
+    "Implement smooth scrolling (Lenis is recommended but native 'scroll-behavior: smooth' in CSS is acceptable for simplicity if Lenis is complex to setup).",
+    "Create a 'LogoPlaceholder' component as requested.",
+    "Use Shadcn UI components for the Contact Form (Input, Textarea, Select, Button, Form, Label).",
+    "Customize Shadcn components to match the Earthy theme (remove default black/zinc borders, use soft grey borders).",
+    "Ensure the contact form has the specific fields: Nom, Email, Téléphone, Pour qui (Self, Couple, Family, Child), Description, Motif.",
+    "Do NOT use gradients. Use solid colors and subtle textures.",
+    "Ensure high contrast for accessibility (WCAG AA).",
+    "Add 'data-testid' to all interactive elements."
+  ],
+  "universal_guidelines": {
+    "animations": "Use framer-motion for entrance animations (fade-in up). Hover states should be subtle (opacity change or slight scale).",
+    "accessibility": "Ensure all text has sufficient contrast against the beige backgrounds. Use semantic HTML.",
+    "responsive": "Stack columns on mobile. Ensure touch targets are at least 44px."
+  }
+}
