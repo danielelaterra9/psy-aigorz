@@ -1,0 +1,106 @@
+import React from 'react';
+import { MapPin, Phone, Mail, Clock } from 'lucide-react';
+
+const HeroSection = () => {
+  const scrollToContact = () => {
+    const element = document.querySelector('#contact');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  return (
+    <section 
+      className="hero-section pt-20"
+      data-testid="hero-section"
+    >
+      <div className="section-container">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center min-h-[calc(100vh-80px)] py-12 lg:py-0">
+          {/* Text Content */}
+          <div className="order-2 lg:order-1 animate-fade-in-up">
+            <p className="text-[#CD5D45] text-sm font-medium tracking-widest uppercase mb-4">
+              Psychologue FSP • Saxon, Valais
+            </p>
+            <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl text-[#2D3339] font-medium leading-tight mb-6">
+              Sophie Aigroz
+            </h1>
+            <p className="text-lg sm:text-xl text-[#5C6269] leading-relaxed mb-8 max-w-xl">
+              Un espace d'écoute confidentiel et respectueux pour vous accompagner 
+              dans les différentes étapes de vie, situations de crise ou difficultés relationnelles.
+            </p>
+            
+            {/* Quick Info */}
+            <div className="grid sm:grid-cols-2 gap-4 mb-8">
+              <div className="flex items-center gap-3 text-[#5C6269]">
+                <MapPin size={18} className="text-[#CD5D45] flex-shrink-0" />
+                <span className="text-sm">1907 Saxon, Valais</span>
+              </div>
+              <div className="flex items-center gap-3 text-[#5C6269]">
+                <Phone size={18} className="text-[#CD5D45] flex-shrink-0" />
+                <span className="text-sm">079 285 62 09</span>
+              </div>
+              <div className="flex items-center gap-3 text-[#5C6269]">
+                <Clock size={18} className="text-[#CD5D45] flex-shrink-0" />
+                <span className="text-sm">Lun & Mer: 8h00-18h00</span>
+              </div>
+              <div className="flex items-center gap-3 text-[#5C6269]">
+                <Mail size={18} className="text-[#CD5D45] flex-shrink-0" />
+                <span className="text-sm">sophie.aigroz@gmail.com</span>
+              </div>
+            </div>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-wrap gap-4">
+              <button
+                onClick={scrollToContact}
+                className="btn-primary px-8 py-3.5 rounded-full text-base font-medium"
+                data-testid="hero-cta-button"
+              >
+                Prendre contact
+              </button>
+              <a
+                href="tel:0792856209"
+                className="px-8 py-3.5 rounded-full text-base font-medium border border-[#E5E5E0] text-[#2D3339] hover:border-[#CD5D45] hover:text-[#CD5D45] transition-all duration-300"
+                data-testid="hero-phone-button"
+              >
+                Appeler
+              </a>
+            </div>
+
+            {/* Additional info */}
+            <div className="mt-8 flex flex-wrap gap-6 text-sm text-[#5C6269]">
+              <span className="flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-[#CD5D45]"></span>
+                Uniquement sur rendez-vous
+              </span>
+              <span className="flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-[#CD5D45]"></span>
+                Consultations en ligne possibles
+              </span>
+            </div>
+          </div>
+
+          {/* Image */}
+          <div className="order-1 lg:order-2 animate-fade-in animation-delay-200">
+            <div className="relative">
+              <div className="absolute -inset-4 bg-[#E8B4A6]/20 rounded-2xl transform rotate-3"></div>
+              <img
+                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80"
+                alt="Sophie Aigroz - Psychologue FSP"
+                className="relative portrait-image w-full h-[400px] sm:h-[500px] lg:h-[600px] rounded-2xl shadow-lg"
+                data-testid="hero-portrait"
+              />
+              {/* Floating badge */}
+              <div className="absolute -bottom-4 -left-4 bg-white p-4 rounded-xl shadow-lg">
+                <p className="text-[#CD5D45] font-heading text-2xl font-semibold">15+</p>
+                <p className="text-[#5C6269] text-xs">années d'expérience</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default HeroSection;
