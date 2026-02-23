@@ -29,19 +29,18 @@ const ApproachSection = () => {
       <div className="section-container">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Image */}
-          <div className="relative">
-            <div className="absolute -inset-4 bg-[#CD5D45]/5 rounded-2xl transform -rotate-2"></div>
+          <div className="relative flex items-center justify-center">
             <img
-              src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80"
-              alt="Espace thérapeutique accueillant"
-              className="relative w-full h-[400px] lg:h-[500px] object-cover rounded-2xl"
+              src="https://customer-assets.emergentagent.com/job_aigroz-psy/artifacts/9kaxbdrk_Image%20cercles.png"
+              alt="Approche systémique - liens interconnectés"
+              className="w-full max-w-md h-auto object-contain"
               data-testid="approach-image"
             />
           </div>
 
           {/* Content */}
           <div>
-            <p className="text-[#CD5D45] text-sm font-medium tracking-widest uppercase mb-4">
+            <p className="text-[#D4A59A] text-sm font-medium tracking-widest uppercase mb-4">
               Mon approche
             </p>
             <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl text-[#2D3339] font-medium mb-6">
@@ -52,10 +51,13 @@ const ApproachSection = () => {
               afin de soutenir la compréhension des relations, l'apaisement des tensions et le développement 
               de ressources individuelles, parentales et familiales.
             </p>
-            <p className="text-[#5C6269] text-lg leading-relaxed mb-10">
-              L'approche systémique considère l'individu dans son environnement relationnel. 
-              Mon cabinet à Saxon offre un cadre sécurisant pour explorer vos difficultés et mobiliser vos ressources.
-            </p>
+            
+            {/* Citation */}
+            <blockquote className="border-l-4 border-[#D4A59A] pl-6 py-2 mb-10">
+              <p className="text-[#2D3339] text-xl font-heading italic">
+                « Comprendre les liens, c'est ouvrir des possibles. »
+              </p>
+            </blockquote>
 
             {/* Values */}
             <div className="space-y-6">
@@ -66,7 +68,7 @@ const ApproachSection = () => {
                   data-testid={`value-item-${index}`}
                 >
                   <div className="w-12 h-12 rounded-full bg-white border border-[#E5E5E0] flex items-center justify-center flex-shrink-0">
-                    <value.icon size={20} className="text-[#CD5D45]" />
+                    <value.icon size={20} className="text-[#D4A59A]" />
                   </div>
                   <div>
                     <h4 className="font-heading text-lg text-[#2D3339] font-medium mb-1">
