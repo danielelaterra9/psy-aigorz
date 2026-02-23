@@ -23,7 +23,6 @@ const ContactSection = () => {
     email: '',
     telephone: '',
     consultation_pour: '',
-    situation: '',
     motif: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -43,7 +42,8 @@ const ContactSection = () => {
     setIsSubmitting(true);
 
     try {
-      await axios.post(`${API}/contact`, formData);
+      // Send with empty situation field for backend compatibility
+      await axios.post(`${API}/contact`, { ...formData, situation: formData.motif });
       setSubmitted(true);
       toast.success('Votre demande a été envoyée avec succès. Sophie Aigroz vous contactera prochainement.');
       setFormData({
@@ -51,7 +51,6 @@ const ContactSection = () => {
         email: '',
         telephone: '',
         consultation_pour: '',
-        situation: '',
         motif: ''
       });
     } catch (error) {
@@ -80,7 +79,7 @@ const ContactSection = () => {
         <div className="grid lg:grid-cols-2 gap-16">
           {/* Contact Info */}
           <div>
-            <p className="text-[#CD5D45] text-sm font-medium tracking-widest uppercase mb-4">
+            <p className="text-[#D4A59A] text-sm font-medium tracking-widest uppercase mb-4">
               Prendre contact
             </p>
             <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl text-[#2D3339] font-medium mb-6">
@@ -98,12 +97,12 @@ const ContactSection = () => {
                 className="flex items-center gap-4 group"
                 data-testid="contact-phone-link"
               >
-                <div className="w-12 h-12 rounded-full bg-[#CD5D45]/10 flex items-center justify-center group-hover:bg-[#CD5D45]/20 transition-colors">
-                  <Phone size={20} className="text-[#CD5D45]" />
+                <div className="w-12 h-12 rounded-full bg-[#D4A59A]/10 flex items-center justify-center group-hover:bg-[#D4A59A]/20 transition-colors">
+                  <Phone size={20} className="text-[#D4A59A]" />
                 </div>
                 <div>
                   <p className="text-sm text-[#5C6269]">Téléphone</p>
-                  <p className="text-[#2D3339] font-medium group-hover:text-[#CD5D45] transition-colors">
+                  <p className="text-[#2D3339] font-medium group-hover:text-[#D4A59A] transition-colors">
                     079 285 62 09
                   </p>
                 </div>
@@ -114,20 +113,20 @@ const ContactSection = () => {
                 className="flex items-center gap-4 group"
                 data-testid="contact-email-link"
               >
-                <div className="w-12 h-12 rounded-full bg-[#CD5D45]/10 flex items-center justify-center group-hover:bg-[#CD5D45]/20 transition-colors">
-                  <Mail size={20} className="text-[#CD5D45]" />
+                <div className="w-12 h-12 rounded-full bg-[#D4A59A]/10 flex items-center justify-center group-hover:bg-[#D4A59A]/20 transition-colors">
+                  <Mail size={20} className="text-[#D4A59A]" />
                 </div>
                 <div>
                   <p className="text-sm text-[#5C6269]">Email</p>
-                  <p className="text-[#2D3339] font-medium group-hover:text-[#CD5D45] transition-colors">
+                  <p className="text-[#2D3339] font-medium group-hover:text-[#D4A59A] transition-colors">
                     sophie.aigroz@gmail.com
                   </p>
                 </div>
               </a>
 
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-[#CD5D45]/10 flex items-center justify-center">
-                  <MapPin size={20} className="text-[#CD5D45]" />
+                <div className="w-12 h-12 rounded-full bg-[#D4A59A]/10 flex items-center justify-center">
+                  <MapPin size={20} className="text-[#D4A59A]" />
                 </div>
                 <div>
                   <p className="text-sm text-[#5C6269]">Localisation</p>
@@ -136,8 +135,8 @@ const ContactSection = () => {
               </div>
 
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-[#CD5D45]/10 flex items-center justify-center">
-                  <Clock size={20} className="text-[#CD5D45]" />
+                <div className="w-12 h-12 rounded-full bg-[#D4A59A]/10 flex items-center justify-center">
+                  <Clock size={20} className="text-[#D4A59A]" />
                 </div>
                 <div>
                   <p className="text-sm text-[#5C6269]">Horaires</p>
@@ -146,8 +145,8 @@ const ContactSection = () => {
               </div>
 
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-[#CD5D45]/10 flex items-center justify-center">
-                  <Video size={20} className="text-[#CD5D45]" />
+                <div className="w-12 h-12 rounded-full bg-[#D4A59A]/10 flex items-center justify-center">
+                  <Video size={20} className="text-[#D4A59A]" />
                 </div>
                 <div>
                   <p className="text-sm text-[#5C6269]">Consultations en ligne</p>
@@ -170,8 +169,8 @@ const ContactSection = () => {
           <div className="bg-[#FDFBF7] rounded-2xl p-8 border border-[#E5E5E0]">
             {submitted ? (
               <div className="h-full flex flex-col items-center justify-center text-center py-12" data-testid="form-success-message">
-                <div className="w-16 h-16 rounded-full bg-[#CD5D45]/10 flex items-center justify-center mb-6">
-                  <Send size={28} className="text-[#CD5D45]" />
+                <div className="w-16 h-16 rounded-full bg-[#D4A59A]/10 flex items-center justify-center mb-6">
+                  <Send size={28} className="text-[#D4A59A]" />
                 </div>
                 <h3 className="font-heading text-2xl text-[#2D3339] mb-4">Demande envoyée</h3>
                 <p className="text-[#5C6269] mb-6">
@@ -201,7 +200,7 @@ const ContactSection = () => {
                     value={formData.nom}
                     onChange={handleChange}
                     placeholder="Votre nom et prénom"
-                    className="mt-2 bg-white border-[#E5E5E0] focus:border-[#CD5D45] focus:ring-[#CD5D45]/20"
+                    className="mt-2 bg-white border-[#E5E5E0] focus:border-[#D4A59A] focus:ring-[#D4A59A]/20"
                     data-testid="form-input-nom"
                   />
                 </div>
@@ -219,7 +218,7 @@ const ContactSection = () => {
                       value={formData.email}
                       onChange={handleChange}
                       placeholder="votre@email.ch"
-                      className="mt-2 bg-white border-[#E5E5E0] focus:border-[#CD5D45] focus:ring-[#CD5D45]/20"
+                      className="mt-2 bg-white border-[#E5E5E0] focus:border-[#D4A59A] focus:ring-[#D4A59A]/20"
                       data-testid="form-input-email"
                     />
                   </div>
@@ -235,7 +234,7 @@ const ContactSection = () => {
                       value={formData.telephone}
                       onChange={handleChange}
                       placeholder="079 123 45 67"
-                      className="mt-2 bg-white border-[#E5E5E0] focus:border-[#CD5D45] focus:ring-[#CD5D45]/20"
+                      className="mt-2 bg-white border-[#E5E5E0] focus:border-[#D4A59A] focus:ring-[#D4A59A]/20"
                       data-testid="form-input-telephone"
                     />
                   </div>
@@ -251,7 +250,7 @@ const ContactSection = () => {
                     required
                   >
                     <SelectTrigger 
-                      className="mt-2 bg-white border-[#E5E5E0] focus:border-[#CD5D45] focus:ring-[#CD5D45]/20"
+                      className="mt-2 bg-white border-[#E5E5E0] focus:border-[#D4A59A] focus:ring-[#D4A59A]/20"
                       data-testid="form-select-consultation"
                     >
                       <SelectValue placeholder="Choisissez une option" />
@@ -271,23 +270,6 @@ const ContactSection = () => {
                 </div>
 
                 <div>
-                  <Label htmlFor="situation" className="text-[#2D3339] font-medium">
-                    Décrivez brièvement votre situation *
-                  </Label>
-                  <Textarea
-                    id="situation"
-                    name="situation"
-                    required
-                    value={formData.situation}
-                    onChange={handleChange}
-                    placeholder="Quelques mots sur votre situation actuelle..."
-                    rows={3}
-                    className="mt-2 bg-white border-[#E5E5E0] focus:border-[#CD5D45] focus:ring-[#CD5D45]/20 resize-none"
-                    data-testid="form-textarea-situation"
-                  />
-                </div>
-
-                <div>
                   <Label htmlFor="motif" className="text-[#2D3339] font-medium">
                     Motif principal de la demande *
                   </Label>
@@ -298,8 +280,8 @@ const ContactSection = () => {
                     value={formData.motif}
                     onChange={handleChange}
                     placeholder="Qu'est-ce qui vous amène à consulter aujourd'hui ?"
-                    rows={3}
-                    className="mt-2 bg-white border-[#E5E5E0] focus:border-[#CD5D45] focus:ring-[#CD5D45]/20 resize-none"
+                    rows={4}
+                    className="mt-2 bg-white border-[#E5E5E0] focus:border-[#D4A59A] focus:ring-[#D4A59A]/20 resize-none"
                     data-testid="form-textarea-motif"
                   />
                 </div>
@@ -312,7 +294,7 @@ const ContactSection = () => {
                 >
                   {isSubmitting ? (
                     <span className="flex items-center gap-2">
-                      <span className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin"></span>
+                      <span className="w-4 h-4 border-2 border-[#2D3339]/30 border-t-[#2D3339] rounded-full animate-spin"></span>
                       Envoi en cours...
                     </span>
                   ) : (

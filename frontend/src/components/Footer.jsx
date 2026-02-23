@@ -62,7 +62,7 @@ const Footer = () => {
             <div className="space-y-2 text-sm text-[#FDFBF7]/70">
               <p>Lundi: 08h00 - 18h00</p>
               <p>Mercredi: 08h00 - 18h00</p>
-              <p className="pt-2 text-[#CD5D45]">Uniquement sur rendez-vous</p>
+              <p className="text-[#D4A59A] text-sm text-[#5C6269]">Uniquement sur rendez-vous</p>
               <p>Consultations en ligne possibles</p>
             </div>
           </div>
