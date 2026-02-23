@@ -80,7 +80,7 @@
   left: 0;
   width: 0;
   height: 1px;
-  background-color: #CD5D45;
+  background-color: #D4A59A;
   transition: width 0.3s ease;
 }
 
@@ -105,23 +105,23 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #CD5D45;
+  background: #D4A59A;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #b54d38;
+  background: #C99589;
 }
 
 /* Button hover */
 .btn-primary {
-  background-color: #CD5D45;
-  color: white;
+  background-color: #D4A59A;
+  color: #2D3339;
   transition: all 0.3s ease;
 }
 
 .btn-primary:hover {
-  background-color: #b54d38;
+  background-color: #C99589;
   transform: translateY(-1px);
 }
 

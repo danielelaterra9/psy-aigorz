@@ -18,12 +18,15 @@ const HeroSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center min-h-[calc(100vh-80px)] py-12 lg:py-0">
           {/* Text Content */}
           <div className="order-2 lg:order-1 animate-fade-in-up">
-            <p className="text-[#CD5D45] text-sm font-medium tracking-widest uppercase mb-4">
-              Psychologue FSP • Saxon, Valais
-            </p>
-            <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl text-[#2D3339] font-medium leading-tight mb-6">
+            <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl text-[#2D3339] font-medium leading-tight mb-2">
               Sophie Aigroz
             </h1>
+            <p className="text-[#D4A59A] text-xl sm:text-2xl font-heading font-medium tracking-wide mb-2">
+              Psychologue FSP
+            </p>
+            <p className="text-[#5C6269] text-sm tracking-widest uppercase mb-6">
+              Saxon, Valais
+            </p>
             <p className="text-lg sm:text-xl text-[#5C6269] leading-relaxed mb-8 max-w-xl">
               Un espace d'écoute confidentiel et respectueux pour vous accompagner 
               dans les différentes étapes de vie, situations de crise ou difficultés relationnelles.
@@ -32,19 +35,19 @@ const HeroSection = () => {
             {/* Quick Info */}
             <div className="grid sm:grid-cols-2 gap-4 mb-8">
               <div className="flex items-center gap-3 text-[#5C6269]">
-                <MapPin size={18} className="text-[#CD5D45] flex-shrink-0" />
+                <MapPin size={18} className="text-[#D4A59A] flex-shrink-0" />
                 <span className="text-sm">1907 Saxon, Valais</span>
               </div>
               <div className="flex items-center gap-3 text-[#5C6269]">
-                <Phone size={18} className="text-[#CD5D45] flex-shrink-0" />
+                <Phone size={18} className="text-[#D4A59A] flex-shrink-0" />
                 <span className="text-sm">079 285 62 09</span>
               </div>
               <div className="flex items-center gap-3 text-[#5C6269]">
-                <Clock size={18} className="text-[#CD5D45] flex-shrink-0" />
+                <Clock size={18} className="text-[#D4A59A] flex-shrink-0" />
                 <span className="text-sm">Lun & Mer: 8h00-18h00</span>
               </div>
               <div className="flex items-center gap-3 text-[#5C6269]">
-                <Mail size={18} className="text-[#CD5D45] flex-shrink-0" />
+                <Mail size={18} className="text-[#D4A59A] flex-shrink-0" />
                 <span className="text-sm">sophie.aigroz@gmail.com</span>
               </div>
             </div>
@@ -60,7 +63,7 @@ const HeroSection = () => {
               </button>
               <a
                 href="tel:0792856209"
-                className="px-8 py-3.5 rounded-full text-base font-medium border border-[#E5E5E0] text-[#2D3339] hover:border-[#CD5D45] hover:text-[#CD5D45] transition-all duration-300"
+                className="px-8 py-3.5 rounded-full text-base font-medium border border-[#E5E5E0] text-[#2D3339] hover:border-[#D4A59A] hover:text-[#D4A59A] transition-all duration-300"
                 data-testid="hero-phone-button"
               >
                 Appeler
@@ -70,11 +73,11 @@ const HeroSection = () => {
             {/* Additional info */}
             <div className="mt-8 flex flex-wrap gap-6 text-sm text-[#5C6269]">
               <span className="flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-[#CD5D45]"></span>
+                <span className="w-2 h-2 rounded-full bg-[#D4A59A]"></span>
                 Uniquement sur rendez-vous
               </span>
               <span className="flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-[#CD5D45]"></span>
+                <span className="w-2 h-2 rounded-full bg-[#D4A59A]"></span>
                 Consultations en ligne possibles
               </span>
             </div>
@@ -83,7 +86,7 @@ const HeroSection = () => {
           {/* Image */}
           <div className="order-1 lg:order-2 animate-fade-in animation-delay-200">
             <div className="relative">
-              <div className="absolute -inset-4 bg-[#E8B4A6]/20 rounded-2xl transform rotate-3"></div>
+              <div className="absolute -inset-4 bg-[#D4A59A]/20 rounded-2xl transform rotate-3"></div>
               <img
                 src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80"
                 alt="Sophie Aigroz - Psychologue FSP"
@@ -92,7 +95,7 @@ const HeroSection = () => {
               />
               {/* Floating badge */}
               <div className="absolute -bottom-4 -left-4 bg-white p-4 rounded-xl shadow-lg">
-                <p className="text-[#CD5D45] font-heading text-2xl font-semibold">15+</p>
+                <p className="text-[#D4A59A] font-heading text-2xl font-semibold">15+</p>
                 <p className="text-[#5C6269] text-xs">années d'expérience</p>
               </div>
             </div>

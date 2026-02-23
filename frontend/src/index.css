@@ -27,13 +27,13 @@ h1, h2, h3, h4, h5, h6 {
     --card-foreground: 210 12% 20%;
     --popover: 0 0% 100%;
     --popover-foreground: 210 12% 20%;
-    --primary: 12 55% 54%;
+    --primary: 15 45% 70%;
     --primary-foreground: 40 33% 98%;
     --secondary: 50 10% 95%;
     --secondary-foreground: 210 12% 20%;
     --muted: 50 10% 95%;
     --muted-foreground: 210 8% 40%;
-    --accent: 12 55% 54%;
+    --accent: 15 45% 70%;
     --accent-foreground: 40 33% 98%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
