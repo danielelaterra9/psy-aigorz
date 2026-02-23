@@ -33,8 +33,7 @@ const ServicesSection = () => {
       items: [
         'Adultes',
         'Adolescent·e·s',
-        'Difficultés émotionnelles et relationnelles',
-        'Régulation émotionnelle'
+        'Difficultés émotionnelles et relationnelles'
       ]
     }
   ];
@@ -55,7 +54,7 @@ const ServicesSection = () => {
       <div className="section-container">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <p className="text-[#CD5D45] text-sm font-medium tracking-widest uppercase mb-4">
+          <p className="text-[#D4A59A] text-sm font-medium tracking-widest uppercase mb-4">
             Accompagnement personnalisé
           </p>
           <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl text-[#2D3339] font-medium mb-6">
@@ -75,8 +74,8 @@ const ServicesSection = () => {
               className={`service-card bg-[#FDFBF7] rounded-xl p-8 border border-[#E5E5E0] animate-fade-in-up animation-delay-${(index + 1) * 100}`}
               data-testid={`service-card-${service.id}`}
             >
-              <div className="w-14 h-14 rounded-full bg-[#CD5D45]/10 flex items-center justify-center mb-6">
-                <service.icon size={28} className="text-[#CD5D45]" />
+              <div className="w-14 h-14 rounded-full bg-[#D4A59A]/10 flex items-center justify-center mb-6">
+                <service.icon size={28} className="text-[#D4A59A]" />
               </div>
               <h3 className="font-heading text-2xl text-[#2D3339] font-medium mb-4">
                 {service.title}
@@ -87,7 +86,7 @@ const ServicesSection = () => {
               <ul className="space-y-3">
                 {service.items.map((item, idx) => (
                   <li key={idx} className="flex items-start gap-3 text-[#5C6269] text-sm">
-                    <ChevronRight size={16} className="text-[#CD5D45] flex-shrink-0 mt-0.5" />
+                    <ChevronRight size={16} className="text-[#D4A59A] flex-shrink-0 mt-0.5" />
                     <span>{item}</span>
                   </li>
                 ))}
