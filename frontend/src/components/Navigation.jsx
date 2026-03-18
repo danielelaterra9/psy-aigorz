@@ -17,7 +17,7 @@ const Navigation = () => {
   const navLinks = [
     { href: '#services', label: 'Services' },
     { href: '#approche', label: 'Approche' },
-    { href: '#protection', label: 'Protection' },
+    { href: '#protection', label: 'Pour l\'enfant' },
   ];
 
   const scrollToSection = (href) => {
