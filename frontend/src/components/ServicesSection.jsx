@@ -94,19 +94,19 @@ const ServicesSection = () => {
                 {service.items.map((item, idx) => (
                   <li key={idx} className="flex items-start gap-3 text-[#5C6269] text-sm">
                     <ChevronRight size={16} className="text-[#D4A59A] flex-shrink-0 mt-0.5" />
-                    <span className="flex items-center gap-2 flex-wrap">
-                      {item.text}
+                    <div>
+                      <span>{item.text}</span>
                       {item.link && (
                         <button
                           onClick={scrollToCoparentalite}
-                          className="inline-flex items-center gap-1 text-[#D4A59A] hover:text-[#C99589] font-medium underline underline-offset-2 decoration-1 hover:decoration-2 transition-all cursor-pointer"
+                          className="ml-2 inline-flex items-center gap-1 text-[#D4A59A] hover:text-[#C99589] font-medium underline underline-offset-2 decoration-1 hover:decoration-2 transition-all cursor-pointer text-xs"
                           data-testid="link-en-savoir-plus"
                         >
                           En savoir plus
-                          <ArrowRight size={14} />
+                          <ArrowRight size={12} />
                         </button>
                       )}
-                    </span>
+                    </div>
                   </li>
                 ))}
               </ul>
