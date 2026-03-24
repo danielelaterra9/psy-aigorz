@@ -6,6 +6,7 @@ import ApproachSection from '@/components/ApproachSection';
 import StepsSection from '@/components/StepsSection';
 import ProtectionSection from '@/components/ProtectionSection';
 import ContactSection from '@/components/ContactSection';
+import CoparentaliteSection from '@/components/CoparentaliteSection';
 import Footer from '@/components/Footer';
 
 const HomePage = () => {
@@ -18,6 +19,7 @@ const HomePage = () => {
       <StepsSection />
       <ProtectionSection />
       <ContactSection />
+      <CoparentaliteSection />
       <Footer />
     </div>
   );
