@@ -46,10 +46,22 @@ const ApproachSection = () => {
             <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl text-[#2D3339] font-medium mb-6">
               Une Approche Systémique
             </h2>
+            <p className="text-[#5C6269] text-lg leading-relaxed mb-6">
+              Je travaille selon une approche systémique, qui considère que nos difficultés 
+              prennent souvent sens dans nos relations.
+            </p>
+            <p className="text-[#5C6269] text-lg leading-relaxed mb-6">
+              Plutôt que de se centrer uniquement sur l'individu, cette approche permet de prendre 
+              du recul sur les interactions avec les proches, les modes de communication et les 
+              rôles que chacun occupe.
+            </p>
+            <p className="text-[#5C6269] text-lg leading-relaxed mb-6">
+              Cela permet de mieux comprendre ce qui se joue… et surtout d'ouvrir des 
+              possibilités de changement.
+            </p>
             <p className="text-[#5C6269] text-lg leading-relaxed mb-8">
-              Je propose un espace d'écoute confidentiel et respectueux, ancré dans une approche systémique, 
-              afin de soutenir la compréhension des relations, l'apaisement des tensions et le développement 
-              de ressources individuelles, parentales et familiales.
+              Parfois, une modification dans la manière d'interagir, de se positionner ou de 
+              communiquer peut avoir des effets positifs sur l'ensemble de la situation.
             </p>
             
             {/* Citation */}

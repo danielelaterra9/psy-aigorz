@@ -30,13 +30,13 @@ const ProtectionSection = () => {
   const values = [
     {
       icon: Shield,
-      title: 'Rigueur & Responsabilité',
-      description: 'L\'évaluation psychologique engage des conséquences importantes. Elle nécessite prudence, méthodologie et conscience des impacts.'
+      title: 'Confidentialité',
+      description: 'Un cadre sécurisant et confidentiel pour explorer vos difficultés en toute confiance.'
     },
     {
       icon: Heart,
-      title: 'Respect des Personnes',
-      description: 'Chaque parent et chaque enfant mérite d\'être entendu avec dignité, même dans des contextes de conflit ou de vulnérabilité.'
+      title: 'Écoute respectueuse',
+      description: 'Une attention bienveillante et sans jugement pour comprendre votre situation unique.'
     },
     {
       icon: Users,
