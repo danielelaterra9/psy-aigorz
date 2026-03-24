@@ -1,7 +1,14 @@
 import React from 'react';
-import { Users, Heart, User, ChevronRight } from 'lucide-react';
+import { Users, Heart, User, ChevronRight, ArrowRight } from 'lucide-react';
 
 const ServicesSection = () => {
+  const scrollToCoparentalite = () => {
+    const element = document.querySelector('#coparentalite');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   const services = [
     {
       id: 'relationnelles',
@@ -9,9 +16,9 @@ const ServicesSection = () => {
       title: 'Thérapies Relationnelles',
       description: 'Accompagnement pour les familles, les couples et la coparentalité. Retrouver l\'équilibre et la communication.',
       items: [
-        'Thérapie familiale',
-        'Thérapie de couple',
-        'Thérapie de coparentalité'
+        { text: 'Thérapie familiale', link: null },
+        { text: 'Thérapie de couple', link: null },
+        { text: 'Thérapie de coparentalité', link: 'coparentalite' }
       ]
     },
     {
@@ -20,9 +27,9 @@ const ServicesSection = () => {
       title: 'Soutien à la Parentalité',
       description: 'Guidance parentale, prévention du burn-out et renforcement du lien parent-enfant.',
       items: [
-        'Guidance parentale',
-        'Accompagnement du burn-out parental',
-        'Reprise ou soutien de la relation parent–enfant'
+        { text: 'Guidance parentale', link: null },
+        { text: 'Accompagnement du burn-out parental', link: null },
+        { text: 'Reprise ou soutien de la relation parent–enfant', link: null }
       ]
     },
     {
@@ -31,9 +38,9 @@ const ServicesSection = () => {
       title: 'Suivis Individuels',
       description: 'Pour adultes et adolescent·e·s. Gestion des difficultés émotionnelles et relationnelles.',
       items: [
-        'Adultes',
-        'Adolescent·e·s',
-        'Difficultés émotionnelles et relationnelles'
+        { text: 'Adultes', link: null },
+        { text: 'Adolescent·e·s', link: null },
+        { text: 'Difficultés émotionnelles et relationnelles', link: null }
       ]
     }
   ];
@@ -87,7 +94,19 @@ const ServicesSection = () => {
                 {service.items.map((item, idx) => (
                   <li key={idx} className="flex items-start gap-3 text-[#5C6269] text-sm">
                     <ChevronRight size={16} className="text-[#D4A59A] flex-shrink-0 mt-0.5" />
-                    <span>{item}</span>
+                    <span className="flex items-center gap-2 flex-wrap">
+                      {item.text}
+                      {item.link && (
+                        <button
+                          onClick={scrollToCoparentalite}
+                          className="inline-flex items-center gap-1 text-[#D4A59A] hover:text-[#C99589] font-medium underline underline-offset-2 decoration-1 hover:decoration-2 transition-all cursor-pointer"
+                          data-testid="link-en-savoir-plus"
+                        >
+                          En savoir plus
+                          <ArrowRight size={14} />
+                        </button>
+                      )}
+                    </span>
                   </li>
                 ))}
               </ul>
