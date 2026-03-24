@@ -86,11 +86,11 @@ const HeroSection = () => {
           {/* Image */}
           <div className="order-1 lg:order-2 animate-fade-in animation-delay-200">
             <div className="relative max-w-md mx-auto lg:max-w-none">
-              <div className="absolute -inset-3 bg-[#D4A59A]/20 rounded-2xl transform rotate-2"></div>
               <img
                 src="https://customer-assets.emergentagent.com/job_aigroz-psy/artifacts/6mh86ox1_image.jpeg"
                 alt="Sophie Aigroz - Psychologue FSP"
-                className="relative w-full h-[350px] sm:h-[400px] lg:h-[480px] object-cover object-top rounded-2xl shadow-lg"
+                className="relative w-full h-[350px] sm:h-[400px] lg:h-[480px] object-cover object-top rounded-2xl shadow-xl"
+                style={{ filter: 'contrast(1.05) saturate(1.1)' }}
                 data-testid="hero-portrait"
               />
             </div>
