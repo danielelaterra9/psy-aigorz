@@ -85,19 +85,14 @@ const HeroSection = () => {
 
           {/* Image */}
           <div className="order-1 lg:order-2 animate-fade-in animation-delay-200">
-            <div className="relative">
-              <div className="absolute -inset-4 bg-[#D4A59A]/20 rounded-2xl transform rotate-3"></div>
+            <div className="relative max-w-md mx-auto lg:max-w-none">
+              <div className="absolute -inset-3 bg-[#D4A59A]/20 rounded-2xl transform rotate-2"></div>
               <img
                 src="https://customer-assets.emergentagent.com/job_aigroz-psy/artifacts/6mh86ox1_image.jpeg"
                 alt="Sophie Aigroz - Psychologue FSP"
-                className="relative portrait-image w-full h-[400px] sm:h-[500px] lg:h-[600px] rounded-2xl shadow-lg"
+                className="relative w-full h-[350px] sm:h-[400px] lg:h-[480px] object-cover object-top rounded-2xl shadow-lg"
                 data-testid="hero-portrait"
               />
-              {/* Floating badge */}
-              <div className="absolute -bottom-4 -left-4 bg-white p-4 rounded-xl shadow-lg">
-                <p className="text-[#D4A59A] font-heading text-2xl font-semibold">15+</p>
-                <p className="text-[#5C6269] text-xs">années d'expérience</p>
-              </div>
             </div>
           </div>
         </div>
