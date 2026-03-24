@@ -88,7 +88,7 @@ const HeroSection = () => {
             <div className="relative">
               <div className="absolute -inset-4 bg-[#D4A59A]/20 rounded-2xl transform rotate-3"></div>
               <img
-                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80"
+                src="https://customer-assets.emergentagent.com/job_aigroz-psy/artifacts/6mh86ox1_image.jpeg"
                 alt="Sophie Aigroz - Psychologue FSP"
                 className="relative portrait-image w-full h-[400px] sm:h-[500px] lg:h-[600px] rounded-2xl shadow-lg"
                 data-testid="hero-portrait"
