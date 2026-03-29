@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import axios from 'axios';
-import { toast } from 'sonner';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
@@ -12,10 +10,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
-import { Send, Phone, Mail, MapPin, Clock, Video } from 'lucide-react';
-
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-const API = `${BACKEND_URL}/api`;
+import { Send, Phone, Mail, MapPin, Clock, Video, CheckCircle } from 'lucide-react';
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -27,6 +22,7 @@ const ContactSection = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -40,33 +36,51 @@ const ContactSection = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setError(false);
 
     try {
-      // Send with empty situation field for backend compatibility
-      await axios.post(`${API}/contact`, { ...formData, situation: formData.motif });
-      setSubmitted(true);
-      toast.success('Votre demande a été envoyée avec succès. Sophie Aigroz vous contactera prochainement.');
-      setFormData({
-        nom: '',
-        email: '',
-        telephone: '',
-        consultation_pour: '',
-        motif: ''
+      const response = await fetch('https://formspree.io/f/xwpowwood', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          nom: formData.nom,
+          email: formData.email,
+          telephone: formData.telephone,
+          consultation_pour: formData.consultation_pour,
+          motif: formData.motif,
+          _subject: `Nouvelle demande de contact - ${formData.nom}`
+        })
       });
-    } catch (error) {
-      console.error('Error submitting form:', error);
-      toast.error('Une erreur est survenue. Veuillez réessayer ou nous contacter par téléphone.');
+
+      if (response.ok) {
+        setSubmitted(true);
+        setFormData({
+          nom: '',
+          email: '',
+          telephone: '',
+          consultation_pour: '',
+          motif: ''
+        });
+      } else {
+        setError(true);
+      }
+    } catch (err) {
+      console.error('Error submitting form:', err);
+      setError(true);
     } finally {
       setIsSubmitting(false);
     }
   };
 
   const consultationOptions = [
-    { value: 'soi-meme', label: 'Pour moi-même' },
-    { value: 'couple', label: 'Pour mon couple' },
-    { value: 'famille', label: 'Pour ma famille' },
-    { value: 'enfant', label: 'Pour mon enfant / adolescent·e' },
-    { value: 'coparentalite', label: 'Pour une question de coparentalité' },
+    { value: 'Pour moi-même', label: 'Pour moi-même' },
+    { value: 'Pour mon couple', label: 'Pour mon couple' },
+    { value: 'Pour ma famille', label: 'Pour ma famille' },
+    { value: 'Pour mon enfant / adolescent·e', label: 'Pour mon enfant / adolescent·e' },
+    { value: 'Pour une question de coparentalité', label: 'Pour une question de coparentalité' },
   ];
 
   return (
@@ -170,7 +184,7 @@ const ContactSection = () => {
             {submitted ? (
               <div className="h-full flex flex-col items-center justify-center text-center py-12" data-testid="form-success-message">
                 <div className="w-16 h-16 rounded-full bg-[#D4A59A]/10 flex items-center justify-center mb-6">
-                  <Send size={28} className="text-[#D4A59A]" />
+                  <CheckCircle size={32} className="text-[#D4A59A]" />
                 </div>
                 <h3 className="font-heading text-2xl text-[#2D3339] mb-4">Demande envoyée</h3>
                 <p className="text-[#5C6269] mb-6">
@@ -188,6 +202,12 @@ const ContactSection = () => {
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6" data-testid="contact-form">
+                {error && (
+                  <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg text-sm">
+                    Une erreur est survenue. Veuillez réessayer ou nous contacter par téléphone.
+                  </div>
+                )}
+                
                 <div>
                   <Label htmlFor="nom" className="text-[#2D3339] font-medium">
                     Nom complet *
