@@ -39,7 +39,7 @@ const ContactSection = () => {
     setError(false);
 
     try {
-      const response = await fetch('https://formspree.io/f/xwpowwood', {
+      const response = await fetch('https://formspree.io/f/mykbedbo', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
