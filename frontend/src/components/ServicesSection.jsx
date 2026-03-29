@@ -39,7 +39,7 @@ const ServicesSection = () => {
       description: 'Pour adultes et adolescent·e·s. Gestion des difficultés émotionnelles et relationnelles.',
       items: [
         { text: 'Adultes', link: null },
-        { text: 'Adolescent·e·s', link: null },
+        { text: 'Adolescent·e·s dès 12 ans', link: null },
         { text: 'Difficultés émotionnelles et relationnelles', link: null }
       ]
     }
