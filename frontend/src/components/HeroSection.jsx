@@ -87,7 +87,7 @@ const HeroSection = () => {
           <div className="order-1 lg:order-2 animate-fade-in animation-delay-200">
             <div className="relative max-w-[450px] mx-auto">
               <img
-                src="https://customer-assets.emergentagent.com/job_aigroz-psy/artifacts/hlr8pp0b_IMG-20260325-WA0024.jpg"
+                src="https://customer-assets.emergentagent.com/job_aigroz-psy/artifacts/4cda8qm9_IMG-20260325-WA0024.jpg"
                 alt="Sophie Aigroz - Psychologue FSP"
                 className="w-full h-auto object-contain rounded-2xl shadow-xl"
                 data-testid="hero-portrait"
