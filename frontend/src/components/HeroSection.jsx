@@ -89,8 +89,8 @@ const HeroSection = () => {
               <img
                 src="https://customer-assets.emergentagent.com/job_aigroz-psy/artifacts/hlr8pp0b_IMG-20260325-WA0024.jpg"
                 alt="Sophie Aigroz - Psychologue FSP"
-                className="w-full h-auto aspect-[3/4] object-cover"
-                style={{ objectPosition: '35% 60%' }}
+                className="w-full h-auto aspect-[4/5] object-cover"
+                style={{ objectPosition: '35% 55%' }}
                 data-testid="hero-portrait"
               />
             </div>
