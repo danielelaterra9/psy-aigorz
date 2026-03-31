@@ -423,7 +423,7 @@ ul {
     height: auto;
     aspect-ratio: 3/4;
     object-fit: cover;
-    object-position: center 60%;
+    object-position: 35% 60%;
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-lg);
     margin: 0 auto;
