@@ -419,11 +419,11 @@ ul {
 
 .hero-image img {
     width: 100%;
-    max-width: 400px;
+    max-width: 420px;
     height: auto;
-    aspect-ratio: 1/1.2;
+    aspect-ratio: 3/4;
     object-fit: cover;
-    object-position: center top;
+    object-position: center 60%;
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-lg);
     margin: 0 auto;
@@ -432,13 +432,13 @@ ul {
 
 @media (min-width: 640px) {
     .hero-image img {
-        max-width: 420px;
+        max-width: 450px;
     }
 }
 
 @media (min-width: 1024px) {
     .hero-image img {
-        max-width: 450px;
+        max-width: 480px;
     }
 }
 
