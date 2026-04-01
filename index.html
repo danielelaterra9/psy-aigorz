@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sophie Aigroz - Psychologue FSP à Saxon, Valais. Accompagnement pour enfants, adolescents, adultes, couples et familles. Approche systémique.">
+    <meta name="keywords" content="psychologue, FSP, Saxon, Valais, thérapie familiale, thérapie de couple, coparentalité, burnout parental">
+    <meta name="author" content="Sophie Aigroz">
+    <title>Sophie Aigroz - Psychologue FSP | Saxon, Valais</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header id="navbar" class="navbar">
+        <nav class="nav-container">
+            <a href="#" class="nav-logo" onclick="scrollToTop(event)">
+                <img src="https://customer-assets.emergentagent.com/job_aigroz-psy/artifacts/n2exae4u_image.png" alt="Logo" class="logo-img">
+                <div class="logo-text">
+                    <span class="logo-name">Sophie Aigroz</span>
+                    <span class="logo-title">Psychologue FSP</span>
+                </div>
+            </a>
+            
+            <div class="nav-links" id="navLinks">
+                <a href="#services" class="nav-link" onclick="smoothScroll(event, 'services')">Services</a>
+                <a href="#approche" class="nav-link" onclick="smoothScroll(event, 'approche')">Approche</a>
+                <a href="#protection" class="nav-link" onclick="smoothScroll(event, 'protection')">Pour l'enfant</a>
+                <a href="#contact" class="btn-primary nav-cta" onclick="smoothScroll(event, 'contact')">Prendre contact</a>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn" onclick="toggleMobileMenu()">
+                <i data-lucide="menu" id="menuIcon"></i>
+                <i data-lucide="x" id="closeIcon" style="display: none;"></i>
+            </button>
+        </nav>
+        
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#services" class="mobile-link" onclick="smoothScroll(event, 'services')">Services</a>
+            <a href="#approche" class="mobile-link" onclick="smoothScroll(event, 'approche')">Approche</a>
+            <a href="#protection" class="mobile-link" onclick="smoothScroll(event, 'protection')">Pour l'enfant</a>
+            <a href="#contact" class="btn-primary mobile-cta" onclick="smoothScroll(event, 'contact')">Prendre contact</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <h1 class="hero-title">Sophie Aigroz</h1>
+                    <p class="hero-subtitle">Psychologue FSP</p>
+                    <p class="hero-location">SAXON, VALAIS</p>
+                    
+                    <p class="hero-description">
+                        Un espace d'écoute confidentiel et respectueux pour vous accompagner 
+                        dans les différentes étapes de vie, situations de crise ou difficultés relationnelles.
+                    </p>
+                    
+                    <div class="hero-info">
+                        <div class="info-item">
+                            <i data-lucide="map-pin" class="info-icon"></i>
+                            <span>1907 Saxon, Valais</span>
+                        </div>
+                        <div class="info-item">
+                            <i data-lucide="phone" class="info-icon"></i>
+                            <span>079 285 62 09</span>
+                        </div>
+                        <div class="info-item">
+                            <i data-lucide="clock" class="info-icon"></i>
+                            <span>Lun & Mer: 8h00-18h00</span>
+                        </div>
+                        <div class="info-item">
+                            <i data-lucide="mail" class="info-icon"></i>
+                            <span>sophie.aigroz@gmail.com</span>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn-primary" onclick="smoothScroll(event, 'contact')">Prendre contact</a>
+                        <a href="tel:0792856209" class="btn-secondary">Appeler</a>
+                    </div>
+                    
+                    <div class="hero-badges">
+                        <span class="badge"><span class="badge-dot"></span>Uniquement sur rendez-vous</span>
+                        <span class="badge"><span class="badge-dot"></span>Consultations en ligne possibles</span>
+                    </div>
+                </div>
+                
+                <div class="hero-image">
+                    <img src="https://customer-assets.emergentagent.com/job_aigroz-psy/artifacts/4cda8qm9_IMG-20260325-WA0024.jpg" alt="Sophie Aigroz - Psychologue FSP">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-label">Accompagnement personnalisé</p>
+                <h2 class="section-title">Mes Services</h2>
+                <p class="section-description">
+                    J'accompagne les enfants, les adolescent·e·s, les adultes, les couples et les familles 
+                    dans différentes étapes de vie, situations de crise ou difficultés relationnelles.
+                </p>
+            </div>
+            
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i data-lucide="users"></i>
+                    </div>
+                    <h3 class="service-title">Thérapies Relationnelles</h3>
+                    <p class="service-description">
+                        Accompagnement pour les familles, les couples et la coparentalité. 
+                        Retrouver l'équilibre et la communication.
+                    </p>
+                    <ul class="service-list">
+                        <li><i data-lucide="chevron-right"></i><span>Thérapie familiale</span></li>
+                        <li><i data-lucide="chevron-right"></i><span>Thérapie de couple</span></li>
+                        <li>
+                            <i data-lucide="chevron-right"></i>
+                            <span>
+                                Thérapie de coparentalité 
+                                <a href="#coparentalite" class="link-savoir-plus" onclick="smoothScroll(event, 'coparentalite')">
+                                    En savoir plus <i data-lucide="arrow-right" style="width: 12px; height: 12px;"></i>
+                                </a>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i data-lucide="heart"></i>
+                    </div>
+                    <h3 class="service-title">Soutien à la Parentalité</h3>
+                    <p class="service-description">
+                        Guidance parentale, prévention du burn-out et renforcement du lien parent-enfant.
+                    </p>
+                    <ul class="service-list">
+                        <li><i data-lucide="chevron-right"></i><span>Guidance parentale</span></li>
+                        <li><i data-lucide="chevron-right"></i><span>Accompagnement du burn-out parental</span></li>
+                        <li><i data-lucide="chevron-right"></i><span>Reprise ou soutien de la relation parent–enfant</span></li>
+                    </ul>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i data-lucide="user"></i>
+                    </div>
+                    <h3 class="service-title">Suivis Individuels</h3>
+                    <p class="service-description">
+                        Pour adultes et adolescent·e·s. Gestion des difficultés émotionnelles et relationnelles.
+                    </p>
+                    <ul class="service-list">
+                        <li><i data-lucide="chevron-right"></i><span>Adultes</span></li>
+                        <li><i data-lucide="chevron-right"></i><span>Adolescent·e·s dès 12 ans</span></li>
+                        <li><i data-lucide="chevron-right"></i><span>Difficultés émotionnelles et relationnelles</span></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="section-cta">
+                <a href="#contact" class="btn-primary" onclick="smoothScroll(event, 'contact')">
+                    Demander un premier entretien
+                    <i data-lucide="chevron-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Approach Section -->
+    <section id="approche" class="approach-section">
+        <div class="container">
+            <div class="approach-grid">
+                <div class="approach-image">
+                    <img src="https://customer-assets.emergentagent.com/job_aigroz-psy/artifacts/9kaxbdrk_Image%20cercles.png" alt="Approche systémique">
+                </div>
+                
+                <div class="approach-content">
+                    <p class="section-label">Mon approche</p>
+                    <h2 class="section-title">Une Approche Systémique</h2>
+                    
+                    <p class="approach-text">
+                        Je travaille selon une approche systémique, qui considère que nos difficultés 
+                        prennent souvent sens dans nos relations.
+                    </p>
+                    <p class="approach-text">
+                        Plutôt que de se centrer uniquement sur l'individu, cette approche permet de prendre 
+                        du recul sur les interactions avec les proches, les modes de communication et les 
+                        rôles que chacun occupe.
+                    </p>
+                    <p class="approach-text">
+                        Cela permet de mieux comprendre ce qui se joue… et surtout d'ouvrir des 
+                        possibilités de changement.
+                    </p>
+                    <p class="approach-text">
+                        Parfois, une modification dans la manière d'interagir, de se positionner ou de 
+                        communiquer peut avoir des effets positifs sur l'ensemble de la situation.
+                    </p>
+                    
+                    <blockquote class="quote">
+                        « Comprendre les liens, c'est ouvrir des possibles. »
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Steps Section -->
+    <section id="etapes" class="steps-section">
+        <div class="container">
+            <div class="steps-grid">
+                <div class="steps-image">
+                    <img src="https://images.unsplash.com/photo-1588006011843-15eabd03569d?auto=format&fit=crop&w=800&q=80" alt="Parcours thérapeutique">
+                    <div class="steps-image-quote">
+                        « Un accompagnement structuré, adapté à votre rythme. »
+                    </div>
+                </div>
+                
+                <div class="steps-content">
+                    <p class="section-label">Le parcours</p>
+                    <h2 class="section-title">Les Étapes du Travail Thérapeutique</h2>
+                    <p class="steps-intro">
+                        Mon accompagnement s'organise en plusieurs étapes, pensées pour être à la fois 
+                        structurées et adaptées à votre rythme.
+                    </p>
+                    
+                    <div class="steps-list">
+                        <div class="step-item">
+                            <div class="step-number">1</div>
+                            <div class="step-text">
+                                <h4>Retrouver rapidement un apaisement</h4>
+                                <p>La première étape vise à diminuer la souffrance psychologique et à rétablir un sentiment de mieux-être. Il s'agit de vous offrir un espace sécurisant, de comprendre ce qui vous amène et de mettre en place des premiers leviers concrets pour apaiser les tensions.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="step-item">
+                            <div class="step-number">2</div>
+                            <div class="step-text">
+                                <h4>Évaluer l'alliance thérapeutique</h4>
+                                <p>Nous prenons ensuite un temps pour faire le point sur notre collaboration : Est-ce que vous vous sentez à l'aise ? Est-ce que mon approche et ma manière de travailler vous conviennent ? Cette étape est essentielle, car la qualité de la relation thérapeutique est un facteur clé du changement.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="step-item">
+                            <div class="step-number">3</div>
+                            <div class="step-text">
+                                <h4>Construire un parcours personnalisé</h4>
+                                <p>Enfin, nous définissons ensemble des objectifs thérapeutiques spécifiques et un accompagnement sur mesure. Ce parcours tient compte de votre histoire, de vos ressources et de vos besoins, avec une direction claire et évolutive.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Protection Section -->
+    <section id="protection" class="protection-section">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-label">Entre clinique, recherche et institution</p>
+                <h2 class="section-title">Protection de l'Enfant</h2>
+                <p class="section-description">
+                    Au-delà de mon activité clinique, je m'engage dans la recherche et la protection institutionnelle 
+                    de l'enfant, avec une approche rigoureuse et respectueuse de chaque famille.
+                </p>
+            </div>
+            
+            <div class="protection-cards">
+                <div class="protection-card">
+                    <div class="protection-card-header">
+                        <div class="protection-icon">
+                            <i data-lucide="graduation-cap"></i>
+                        </div>
+                        <div>
+                            <h3>Recherche Universitaire</h3>
+                            <p class="protection-subtitle">Doctorat en cours – Université de Lausanne</p>
+                        </div>
+                    </div>
+                    <p class="protection-text">
+                        Je mène actuellement une recherche doctorale sur l'évaluation des compétences parentales 
+                        dans les contextes de protection de l'enfance.
+                    </p>
+                    <ul class="protection-list">
+                        <li><i data-lucide="book-open"></i><span>Comment définir et évaluer les compétences parentales ?</span></li>
+                        <li><i data-lucide="book-open"></i><span>Comment garantir rigueur et neutralité dans les expertises ?</span></li>
+                        <li><i data-lucide="book-open"></i><span>Comment articuler clinique, droit et protection ?</span></li>
+                    </ul>
+                </div>
+                
+                <div class="protection-card">
+                    <div class="protection-card-header">
+                        <div class="protection-icon">
+                            <i data-lucide="scale"></i>
+                        </div>
+                        <div>
+                            <h3>Membre de l'APEA</h3>
+                            <p class="protection-subtitle">Autorité de Protection de l'Enfant et de l'Adulte</p>
+                        </div>
+                    </div>
+                    <p class="protection-text">
+                        Je siège comme membre psychologue au sein de l'APEA Martigny–St-Maurice et Entremont, 
+                        où je participe aux décisions concernant des situations familiales complexes.
+                    </p>
+                    <ul class="protection-list">
+                        <li><i data-lucide="book-open"></i><span>Travail interdisciplinaire (droit, social, médecine, psychologie)</span></li>
+                        <li><i data-lucide="book-open"></i><span>Attention à la proportionnalité des mesures</span></li>
+                        <li><i data-lucide="book-open"></i><span>Respect des droits des parents et sécurité de l'enfant</span></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="protection-values">
+                <div class="protection-values-images">
+                    <img src="https://images.unsplash.com/photo-1767082091902-791c51aab28a?auto=format&fit=crop&w=500&q=80" alt="Famille unie" class="values-img-1">
+                    <img src="https://images.unsplash.com/photo-1764952365548-02e78927a483?auto=format&fit=crop&w=500&q=80" alt="Enfant avec adulte" class="values-img-2">
+                    <div class="values-quote">
+                        « La recherche nourrit ma pratique et m'invite à maintenir une posture réflexive et exigeante. »
+                    </div>
+                </div>
+                
+                <div class="protection-values-content">
+                    <h3>Mes Valeurs</h3>
+                    <p>
+                        Que ce soit en consultation, dans mes recherches ou au sein de l'APEA, 
+                        je m'appuie sur des principes fondamentaux qui guident chacune de mes interventions.
+                    </p>
+                    
+                    <div class="values-list">
+                        <div class="value-item">
+                            <div class="value-icon"><i data-lucide="shield"></i></div>
+                            <div>
+                                <h4>Confidentialité</h4>
+                                <p>Un cadre sécurisant et confidentiel pour explorer vos difficultés en toute confiance.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="value-item">
+                            <div class="value-icon"><i data-lucide="heart"></i></div>
+                            <div>
+                                <h4>Écoute respectueuse</h4>
+                                <p>Une attention bienveillante et sans jugement pour comprendre votre situation unique.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="value-item">
+                            <div class="value-icon"><i data-lucide="users"></i></div>
+                            <div>
+                                <h4>Intérêt de l'Enfant</h4>
+                                <p>L'intérêt supérieur de l'enfant reste un repère central, tout en tenant compte de la complexité des liens familiaux.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <p class="section-label">Prendre contact</p>
+                    <h2 class="section-title">Demander un Entretien</h2>
+                    <p class="contact-intro">
+                        Avant tout premier rendez-vous, je propose un entretien téléphonique 
+                        afin de mieux comprendre votre situation et vos attentes.
+                    </p>
+                    
+                    <div class="contact-details">
+                        <a href="tel:0792856209" class="contact-item">
+                            <div class="contact-icon"><i data-lucide="phone"></i></div>
+                            <div>
+                                <p class="contact-label">Téléphone</p>
+                                <p class="contact-value">079 285 62 09</p>
+                            </div>
+                        </a>
+                        
+                        <a href="mailto:sophie.aigroz@gmail.com" class="contact-item">
+                            <div class="contact-icon"><i data-lucide="mail"></i></div>
+                            <div>
+                                <p class="contact-label">Email</p>
+                                <p class="contact-value">sophie.aigroz@gmail.com</p>
+                            </div>
+                        </a>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon"><i data-lucide="map-pin"></i></div>
+                            <div>
+                                <p class="contact-label">Localisation</p>
+                                <p class="contact-value">1907 Saxon, Valais</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon"><i data-lucide="clock"></i></div>
+                            <div>
+                                <p class="contact-label">Horaires</p>
+                                <p class="contact-value">Lundi et Mercredi: 08h00 - 18h00</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon"><i data-lucide="video"></i></div>
+                            <div>
+                                <p class="contact-label">Consultations en ligne</p>
+                                <p class="contact-value">Disponibles sur demande</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-note">
+                        <strong>Uniquement sur rendez-vous.</strong> 
+                        Merci de remplir le formulaire ci-contre ou de me contacter par téléphone 
+                        pour convenir d'un premier entretien téléphonique.
+                    </div>
+                </div>
+                
+                <div class="contact-form-wrapper">
+                    <form id="contactForm" class="contact-form" action="https://formspree.io/f/mykbedbo" method="POST">
+                        <div id="formSuccess" class="form-success" style="display: none;">
+                            <div class="success-icon"><i data-lucide="check-circle"></i></div>
+                            <h3>Demande envoyée</h3>
+                            <p>Merci pour votre message. Je vous contacterai dans les plus brefs délais pour convenir d'un entretien téléphonique.</p>
+                            <button type="button" class="btn-secondary" onclick="resetForm()">Nouvelle demande</button>
+                        </div>
+                        
+                        <div id="formFields">
+                            <div id="formError" class="form-error" style="display: none;">
+                                Une erreur est survenue. Veuillez réessayer ou nous contacter par téléphone.
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="nom">Nom complet *</label>
+                                <input type="text" id="nom" name="nom" required placeholder="Votre nom et prénom">
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">Email *</label>
+                                    <input type="email" id="email" name="email" required placeholder="votre@email.ch">
+                                </div>
+                                <div class="form-group">
+                                    <label for="telephone">Téléphone *</label>
+                                    <input type="tel" id="telephone" name="telephone" required placeholder="079 123 45 67">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="consultation_pour">Cette consultation est pour *</label>
+                                <select id="consultation_pour" name="consultation_pour" required>
+                                    <option value="">Choisissez une option</option>
+                                    <option value="Pour moi-même">Pour moi-même</option>
+                                    <option value="Pour mon couple">Pour mon couple</option>
+                                    <option value="Pour ma famille">Pour ma famille</option>
+                                    <option value="Pour mon enfant / adolescent·e">Pour mon enfant / adolescent·e</option>
+                                    <option value="Pour une question de coparentalité">Pour une question de coparentalité</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="motif">Motif principal de la demande *</label>
+                                <textarea id="motif" name="motif" required placeholder="Qu'est-ce qui vous amène à consulter aujourd'hui ?" rows="4"></textarea>
+                            </div>
+                            
+                            <input type="hidden" name="_subject" value="Nouvelle demande de contact - Site psy-aigroz.ch">
+                            
+                            <button type="submit" class="btn-primary submit-btn" id="submitBtn">
+                                <span id="submitText">Envoyer ma demande</span>
+                                <i data-lucide="send"></i>
+                                <span id="submitLoading" style="display: none;">
+                                    <span class="spinner"></span>
+                                    Envoi en cours...
+                                </span>
+                            </button>
+                            
+                            <p class="form-privacy">
+                                Vos données sont traitées de manière confidentielle et ne seront jamais partagées.
+                            </p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coparentalité Section -->
+    <section id="coparentalite" class="coparentalite-section">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-label">Accompagnement spécialisé</p>
+                <h2 class="section-title">La Coparentalité : Accompagner Après la Séparation Conjugale</h2>
+                <p class="section-description">
+                    La séparation transforme le lien conjugal, mais le lien coparental demeure. Je 
+                    propose des accompagnements spécifiquement dédiés à la coparentalité dans ce 
+                    contexte, selon deux formats.
+                </p>
+            </div>
+            
+            <div class="coparentalite-cards">
+                <div class="coparentalite-card">
+                    <div class="coparentalite-header">
+                        <div class="coparentalite-icon"><i data-lucide="users"></i></div>
+                        <h3>Thérapie de Coparentalité</h3>
+                    </div>
+                    <p>
+                        Elle peut se dérouler en individuel, en séances conjointes ou en individuel dans un 
+                        premier temps, puis en commun.
+                    </p>
+                    <p>
+                        Ce travail vise à améliorer la communication entre parents, apaiser les conflits, 
+                        recentrer les décisions autour des besoins de l'enfant et construire une coopération 
+                        parentale plus sereine.
+                    </p>
+                </div>
+                
+                <div class="coparentalite-card">
+                    <div class="coparentalite-header">
+                        <div class="coparentalite-icon"><i data-lucide="calendar"></i></div>
+                        <h3>Ateliers de Coparentalité</h3>
+                    </div>
+                    <p>
+                        Ces ateliers sont proposés plusieurs fois par année, en petit groupe, sur 4 jeudis 
+                        consécutifs de 17h30 à 19h30, et sont animés avec une autre psychothérapeute.
+                    </p>
+                    <div class="participation-box">
+                        <p class="participation-title">Participation possible :</p>
+                        <div class="participation-options">
+                            <span><i data-lucide="check-circle"></i> Seul·e</span>
+                            <span><i data-lucide="check-circle"></i> Avec l'autre parent</span>
+                        </div>
+                    </div>
+                    <p class="small-text">
+                        Les objectifs de ces ateliers sont de réduire les tensions coparentales, d'acquérir des 
+                        outils concrets pour communiquer plus sereinement avec votre coparent et de 
+                        développer des stratégies pour soutenir votre enfant dans ce contexte. L'avantage du 
+                        groupe est aussi d'échanger sur vos expériences respectives et de vous rendre 
+                        compte que bien d'autres parents vivent les mêmes difficultés que vous.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <div class="footer-logo-circle">
+                            <img src="https://customer-assets.emergentagent.com/job_aigroz-psy/artifacts/n2exae4u_image.png" alt="Logo">
+                        </div>
+                        <div>
+                            <span class="footer-name">Sophie Aigroz</span>
+                            <span class="footer-title">Psychologue FSP</span>
+                        </div>
+                    </div>
+                    <p class="footer-description">
+                        Accompagnement psychologique pour enfants, adolescent·e·s, adultes, 
+                        couples et familles au cœur du Valais.
+                    </p>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <a href="tel:0792856209"><i data-lucide="phone"></i> 079 285 62 09</a>
+                    <a href="mailto:sophie.aigroz@gmail.com"><i data-lucide="mail"></i> sophie.aigroz@gmail.com</a>
+                    <span><i data-lucide="map-pin"></i> 1907 Saxon, Valais</span>
+                </div>
+                
+                <div class="footer-hours">
+                    <h4>Horaires</h4>
+                    <p>Lundi: 08h00 - 18h00</p>
+                    <p>Mercredi: 08h00 - 18h00</p>
+                    <p class="footer-highlight">Uniquement sur rendez-vous</p>
+                    <p>Consultations en ligne possibles</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2024 Sophie Aigroz - Psychologue FSP. Tous droits réservés.</p>
+                <p>www.psy-aigroz.ch</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
