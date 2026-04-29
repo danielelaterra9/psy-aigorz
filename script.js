@@ -53,15 +53,17 @@ function initNavbarScroll() {
     window.addEventListener('scroll', function() {
         if (window.scrollY > 50) {
             navbar.classList.add('scrolled');
-        } else {
+        }
+        else {
             navbar.classList.remove('scrolled');
         }
     });
 }
 
-// Contact form — sends to backend /api/contact
+// Contact form — Static-friendly submission via FormSubmit to Sophie's email
 function initContactForm() {
     const form = document.getElementById('contactForm');
+    if (!form) return;
 
     form.addEventListener('submit', async function(event) {
         event.preventDefault();
@@ -83,26 +85,15 @@ function initContactForm() {
 
         try {
             const formData = new FormData(form);
-            const data = Object.fromEntries(formData.entries());
-
-            // Same origin in production; override via data-backend-url on <form> for local dev
-            const backendBase = form.dataset.backendUrl || window.location.origin;
-            const apiUrl = `${backendBase}/api/contact`;
-
-            const response = await fetch(apiUrl, {
+            
+            // Send to FormSubmit (static-friendly) directly to Sophie's email
+            const response = await fetch('https://formsubmit.co/ajax/sophie.aigroz@gmail.com', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                     'Accept': 'application/json'
                 },
-                body: JSON.stringify({
-                    nom:               data.nom               || data.name || '',
-                    email:             data.email,
-                    telephone:         data.telephone         || data.phone || '',
-                    consultation_pour: data.consultation_pour || data['consultation-pour'] || 'soi-meme',
-                    situation:         data.situation,
-                    motif:             data.motif
-                })
+                body: JSON.stringify(Object.fromEntries(formData.entries()))
             });
 
             if (response.ok) {
@@ -110,8 +101,6 @@ function initContactForm() {
                 formSuccess.style.display = 'block';
                 lucide.createIcons();
             } else {
-                const err = await response.json().catch(() => ({}));
-                console.error('Server error:', err);
                 throw new Error('Form submission failed');
             }
         } catch (error) {
@@ -127,12 +116,12 @@ function initContactForm() {
     });
 }
 
-// Reset form after success
+// Reset form
 function resetForm() {
     const form        = document.getElementById('contactForm');
     const formSuccess = document.getElementById('formSuccess');
     const formFields  = document.getElementById('formFields');
-    form.reset();
+    if (form) form.reset();
     formSuccess.style.display = 'none';
     formFields.style.display  = 'flex';
 }
